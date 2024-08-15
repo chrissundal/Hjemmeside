@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <style>
+     #output {
+        float: right;
+        text-align: center;
+        padding: 10px;
+        font-size: larger;
+        flex-wrap: wrap;
+     }
+     #header {
+        width: 300px;
+     }
+     .counter {
+        display: grid;
+        grid-row: auto;
+        justify-content: center;
+    
+     }
+     .mainBtn {
+        display: flex;
+        height: 30px;
+        
+     }
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 190px;
+        height: 40px;
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+        border-bottom: 2px solid gray;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    #telleLabel {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 190px;
+        height: 40px;
+        border-top: 2px solid gray;
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-size: 40px;
+
+    }
+    #minusBtn{
+        height: 30px;
+        width: 60px;
+        border: 2px solid gray;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        font-size: large;
+        
+
+    }
+    #resetBtn{
+        height: 30px;
+        width: 60px;
+        border: 2px solid gray;
+        font-size: large;
+    }
+    #plussBtn{
+        height: 30px;
+        width: 60px;
+        border: 2px solid gray;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-size: large;
+    }
+
+    </style>
+</head>
+<body id="body">
+
+    <div class="mainBtn">
+        <div class="counter">
+            <div id ="telleLabel">0</div>
+            <div class="container">
+                <button id="minusBtn">-</button>
+                <button id="resetBtn">reset</button>
+                <button id="plussBtn">+</button>
+            </div>
+        </div>
+        <button class="colorBtn" onclick="changeColor()">bytt bakgrunnsfarge</button>
+        <button class="colorBtn" onclick="changeFontColor()">bytt font farge</button>
+        <button onclick="setTlf()">telefonnummer</button>
+        <button onclick="setMail()">mail</button>
+    </div>
+    <div id="output">
+        <h1 id="header">Hjemmeside</h1>
+    </div>
+        
+
+
+    <script>
+       
+    // var number = 5; //int
+    // var floatnumber = 5.5; //kommaseparert tall
+    // var text = "en liten tekst"; //string
+    // var enkeltTegn = 'a', //char
+    // var booleans = true; //booleans
+    
+    var outputDiv = document.getElementById('output');
+    var colorIndex = 0;
+    var colorSet = ["red","green","blue","pink"];
+    
+    function changeColor() {
+        var background = document.getElementById("body");
+        ("body");
+        if (colorIndex >= colorSet.length) {
+            colorIndex = 0;
+        }
+        background.style.backgroundColor = colorSet[colorIndex];
+        colorIndex++;
+    }
+
+
+    function changeFontColor() {
+        var backgroundFont = document.getElementById("body");
+        if (colorIndex >= colorSet.length) {
+            colorIndex = 0;
+        }
+        backgroundFont.style.color = colorSet[colorIndex];
+        colorIndex++;
+    }
+
+    let teller = 0;
+    document.getElementById("minusBtn").onclick = function() {
+        teller -=1;
+        document.getElementById("telleLabel").innerHTML = teller;
+    }
+    document.getElementById("resetBtn").onclick = function() {
+        teller =0;
+        document.getElementById("telleLabel").innerHTML = teller;
+    }
+    document.getElementById("plussBtn").onclick = function() {
+        teller +=1;
+        document.getElementById("telleLabel").innerHTML = teller;
+    }
+    var showBtn = 0;
+    function setTlf() {
+        showBtn = 98074700;
+        outputDiv.innerHTML = showBtn;
+    }
+    function setMail(){
+        showBtn = `<a href="mailto:christofferjaco@getacademy.no">Mail</a>`;
+        outputDiv.innerHTML = showBtn;
+    }
+    
+    </script>
+</body>
+</html>
