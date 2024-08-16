@@ -52,11 +52,15 @@ var outputDiv = document.getElementById('output');
                 `;
             }
             function show3() {
-                blankAll();     
+                blankAll();   
+                let scale = document.getElementById('skaler').valueAsNumber;  
+                let scale2 = document.getElementById('skaler2').valueAsNumber;  
                 document.getElementById('dropTag3').innerHTML = /*HTML*/`
-                <div id="bilde"></div>
+                <div style= "height: ${scale}px; width: ${scale2}px;" id="bilde"></div>
+                
                 `;
             }
+            
             
         function show1() {
             blankAll();     
@@ -90,3 +94,4 @@ var outputDiv = document.getElementById('output');
                     document.getElementById('dropTag3').innerHTML = ``;
                    
                     }
+                    

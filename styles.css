@@ -3,16 +3,20 @@
     cursor: pointer;
     border: 2px solid gray;
     border-radius: 10px;
-
+    justify-content: center;
 }
 .card {
-    width: 200px;
+    width: 250px;
     border: 2px solid darkgray;
     margin: 10px;
     border-radius: 12px;
     align-content: center;
-   
-
+}
+.menyHeight, .menyWidth {
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 10px;
+    justify-content: center;
 }
  #output {
     text-align: center;
@@ -29,9 +33,11 @@
     display: flex;
     justify-content: center;
  }
-
+#skaler, #skaler2 {
+    width: 80px;
+}
 #cards {
-    float: right;
+    float:left;
     display: grid;
     
 }
@@ -68,7 +74,10 @@
 #bilde {
     background: url(IMG/chris.jpg);
     background-size: cover;
-    width: auto;
     height: 300px;
     border-radius: 10px;
+    justify-content: center;
+}
+.textbox {
+    text-align: center;
 }
