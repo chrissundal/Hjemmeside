@@ -21,6 +21,11 @@ var outputDiv = document.getElementById('output');
         backgroundFont.style.color = colorSet[colorIndex];
         colorIndex++;
     }
+    function resetColor() {
+        blankAll();
+        document.getElementById("body").style.backgroundColor='white';
+        document.getElementById("body").style.color='black';
+    }
     
     var showBtn = 0;
     function setTlf() {

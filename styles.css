@@ -1,4 +1,4 @@
-.menyBilde, .menyTelle, .menyHobby, .menyFarge, .menyFargeFont{
+.menyBilde, .menyTelle, .menyHobby, .menyFarge, .menyFargeFont, .menyFargeReset{
     text-align: center;
     cursor: pointer;
     border: 2px solid gray;
@@ -30,7 +30,7 @@
     justify-content: center;
  }
 
-.container {
+#cards {
     float: right;
     display: grid;
     
