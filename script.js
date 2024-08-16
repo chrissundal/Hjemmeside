@@ -3,6 +3,7 @@ var outputDiv = document.getElementById('output');
     var colorSet = ["red","green","blue","pink","white","black","yellow"];
     
     function changeColor() {
+        blankAll();
         var background = document.getElementById("body");
         ("body");
         if (colorIndex >= colorSet.length) {
@@ -11,9 +12,8 @@ var outputDiv = document.getElementById('output');
         background.style.backgroundColor = colorSet[colorIndex];
         colorIndex++;
     }
-
-
     function changeFontColor() {
+        blankAll();
         var backgroundFont = document.getElementById("body");
         if (colorIndex >= colorSet.length) {
             colorIndex = 0;
@@ -21,7 +21,7 @@ var outputDiv = document.getElementById('output');
         backgroundFont.style.color = colorSet[colorIndex];
         colorIndex++;
     }
-
+    
     var showBtn = 0;
     function setTlf() {
         showBtn = 98074700;
